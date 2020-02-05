@@ -1,5 +1,5 @@
 require_relative 'spec_helper.rb'
-
+require 'pry'
 describe "Associations" do
   before do
     @owner = Owner.new("Timmy")
@@ -54,7 +54,7 @@ describe "Associations" do
         @owner.buy_cat("Crookshanks")
         @owner.buy_cat("Whiskers")
         @owner.buy_cat("Garfield")
-
+        
         expect(@owner.cats[0].name).to eq("Crookshanks")
         expect(@owner.cats[1].name).to eq("Whiskers")
         expect(@owner.cats[2].name).to eq("Garfield")
